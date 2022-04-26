@@ -65,7 +65,7 @@ objects:
                   value: '${KEYCLOAK_ADMIN_PASSWORD}'
                 - name: KC_PROXY
                   value: 'edge'
-              image: quay.io/keycloak/keycloak:18.0.0
+              image: vsbacrzuseisbxaro001.azurecr.io/keycloak/keycloak:latest
               livenessProbe:
                 failureThreshold: 100
                 httpGet:
@@ -90,6 +90,8 @@ objects:
                 - mountPath: /opt/keycloak/data
                   name: empty
               args: ["start-dev"]
+          imagePullSecrets:
+            - name: acr-secret
           volumes:
             - name: empty
               emptyDir: {}
