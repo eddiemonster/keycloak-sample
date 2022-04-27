@@ -65,7 +65,9 @@ objects:
                   value: '${KEYCLOAK_ADMIN_PASSWORD}'
                 - name: KC_PROXY
                   value: 'edge'
-              image: vsbacrzuseisbxaro001.azurecr.io/keycloak/keycloak:latest
+                - name: REGISTRY_NAME
+                  value: '${REGISTRY_NAME}'
+              image: '${REGISTRY_NAME}.azurecr.io/keycloak:latest'
               livenessProbe:
                 failureThreshold: 100
                 httpGet:
