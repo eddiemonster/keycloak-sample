@@ -67,7 +67,7 @@ objects:
                   value: 'edge'
                 - name: REGISTRY_NAME
                   value: '${REGISTRY_NAME}'
-              image: '${REGISTRY_NAME}.azurecr.io/keycloak:latest'
+              image: 'vsbacrzuseisbxaro345.azurecr.io/keycloak:latest'
               livenessProbe:
                 failureThreshold: 100
                 httpGet:
